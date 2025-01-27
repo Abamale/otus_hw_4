@@ -10,4 +10,4 @@ class DataTest:
     def get_response(url, params=None):
         response = requests.get(url, params=params)
         assert response.ok, f"Request to {url} failed with status code {response.status_code}"
-        return response
+        return response.json()  # Возвращаем сразу JSON
